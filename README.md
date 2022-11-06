@@ -1,4 +1,4 @@
-# Duned Powered By Polygon & IPFS
+# Duned Powered By Dune, Polygon, Uniswap & IPFS
 
 ----------------
 
@@ -33,7 +33,11 @@ Since data is getting off Dune' platform, there needs to be an incentive and the
 
 Finally, since we interact with smart contracts to track payments and then allow users to download data, the best part is that all this data is on chain and every time a query is made, events are emitted from the contract which are streamed into discord channels. 
 
+Also, the project solves a problem statement that uniswap foundation mentioned. Data collection can prove to be extremely tedious but through this platform and Dune's API, the latest 100,000 transactions' data can be procured at the click of a button in a matter of seconds.
+
 PS : Since data is on-chain, this in itself could be a super cool Dune Dashboard - A Dashboard to track API Usage!!!!
+
+PPS : I made a super sleek PyDune module ;) People would be able to download this with pip and insert their API key and get query results in one line of code!
 
 ------------
 ## So What Does This Solve?
@@ -49,19 +53,22 @@ PS : Since data is on-chain, this in itself could be a super cool Dune Dashboard
 ## Nitty Gritties Of The Project
 
 The project was mainly built using the following languages:
-  - Dune
-  - Polygon
-  - IPFS
-  - Python
-  - Flask
-  - HTML
-  - CSS
-  - JavaScript
-  - Solidity
-  - Heroku
-  - Discord
-  
+- Dune
+- Uniswap
+- Polygon
+- IPFS
+- Python
+- Flask
+- HTML
+- CSS
+- JavaScript
+- Solidity
+- Heroku
+- Discord
+
 Python and Flask essentially form the backend. This is how all Dune queries are processed and the data download is facilitated. However, this cannot be done all alone. We need query ids from users which is gotten from the frontend. The frontend was built using HTML, CSS & JavaScript. JavaScript handles all web3 functions, like allowing users to mint NFTs if they don't have one already, checking for NFTs and providing token gated access to platform, allowing users to pay per download, etc. All web3 functions are being handled by JavaScript. Solidity is used for writing the NFT contract & the API Tracker contract that handled the pay per download aspect. These smart contracts are deployed on Polygon. And oh, Polygon was super fast and super cheap! Like wow! Transactions happen in that very instant almost. The image and metadata associated with the NFTs are uploaded to Pinata. And like always, Pinata was a saviour. It's amazing how easy it is to upload data and create baseURIs for NFT contracts using IPFS technology and Pinata's service. Go IPFS!!!!! Every time an API call is made using this platform, it emits an event from the contract which is captured and streamed directly into a discord channel. The platform itself is deployed on Heroku. Finally this entire project would not be possible without Dune and their API!
-  
+
+Also, in the end I utilised Dune's API and my product to be able to facilitate extremely quick download of Uniswap data for the latest 100,000 transactions at the click of a button!
+
 I was particularly impressed by how I was able to build an end-to-end pipeline while working all alone. I did not have the inspiration to build something cool until 2pm on 5th November. But talking to Dune and playing with their API just gave me some inspiration to think of something that could be useful. I did something hacky initially and that was to simply facilitate download of data using the API but this by-passed the Dune Pro Plans. That's when I thought why not solve this security problem itself and then facilitate the download of data using the API. Being able to do all of this alone in a span of hardly 10 hours really gave me a lot of confidence in my abilities as a developer!
   
