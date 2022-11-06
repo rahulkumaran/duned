@@ -1,1 +1,1 @@
-worker: python api_call_listener.py 
+web: gunicorn app:app
