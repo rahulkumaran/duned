@@ -5,7 +5,6 @@ import pandas as pd
 import asyncio
 import time
 
-QUERY_ID = 469990
 DUNE_API_KEY = "0VrW09910Jv5mwdNR2Rm1jXcx9cCfXK5"
 HEADER = {"x-dune-api-key" : DUNE_API_KEY}
 
@@ -71,11 +70,10 @@ def produce_query_results(query_id):
 
     response = get_query_results(execution_id)
 
-    print(response.json())
 
     #if(response.json()['state']=='QUERY_STATE_COMPLETED'):
     data = pd.DataFrame(response.json()["result"]["rows"])
-    print(data)
 
     return data
 
+#produce_query_results(1531431)
