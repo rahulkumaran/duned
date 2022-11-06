@@ -4,11 +4,11 @@ from web3 import Web3
 
 import discord
 from discord.ext import commands
-
+import os
 
 CHANNEL_ID = 937226359623798858
 
-DISCORD_BOT_TOKEN = "OTM3MjI2MDQ5MjM2OTI2NDc1.GSPn62.Dcc7-uK9277CFhNqA1vhFvhA_yLP6TYaz7Zb1I" #"ODk3NTU4NzQ3NTU4MzE0MDQ0.YWXauQ.XAstCrblSXDAvq2xmZWcHLvprr4" #os.getenv("DISCORD_TOKEN")
+DISCORD_BOT_TOKEN = os.environ['DISCORD_BOT_TOKEN'] #"ODk3NTU4NzQ3NTU4MzE0MDQ0.YWXauQ.XAstCrblSXDAvq2xmZWcHLvprr4" #os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 intents.members = True
