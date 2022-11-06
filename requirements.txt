@@ -1,7 +1,5 @@
 requests
 pandas
-web3
-discord
 gunicorn
 flask
 wtforms==2.2.1
