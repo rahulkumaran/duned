@@ -28,8 +28,18 @@ def index():
             
     return render_template("index.html", form = form, data="NA")	#render_template basically renders the html code of page mentioned as arg when needed
 
-    
+@app.route("/uniswap-data", methods=['GET', 'POST'])
+def uniswap_data():
 
+    if(request.method=="POST"):
+        print("HEREEE POSTTT")
+        data = produce_query_results(query_id=1531431)
+        resp = make_response(data.to_csv())
+        resp.headers["Content-Disposition"] = "attachment; filename=uniswap_latest_100000.csv"
+        resp.headers["Content-Type"] = "text/csv"
+        return resp
+
+    return render_template("uniswap.html")	#render_template basically renders the html code of page mentioned as arg when needed
 
 if(__name__ == "__main__"):
 	app.run(host="localhost", port=8000, debug=True)
