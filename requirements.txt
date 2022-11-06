@@ -3,3 +3,5 @@ pandas
 web3
 discord
 gunicorn
+flask
+wtforms
